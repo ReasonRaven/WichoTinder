@@ -138,7 +138,7 @@ function setupStudents() {
     "Programar",
     "Edificio G",
     "28",
-    "fotos/wicho.jpg"
+    "images/Curly.jpeg"
   );
 }
 setupStudents();
