@@ -160,8 +160,6 @@ canvas {
 }
 
 
-
-/*COPIAR AQUI!!!!!!!!!!!!!!!!!!!!!!*/
 #suggestionsContainer {
     display: flex;
     flex-wrap: wrap;
@@ -231,5 +229,4 @@ canvas {
     font-size: 0.95em;
   }
   
-  /*HASTA AQUI!!!!!!!!!!!!!!*/
   

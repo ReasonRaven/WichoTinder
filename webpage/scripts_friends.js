@@ -77,10 +77,6 @@ function setupStudents() {
 }
 setupStudents();
 
-
-
-
-//COPIAR DESDE AQU!!!!!!!!!
 let selectedUser = null;
 const addedFriends = new Set();
 
@@ -168,6 +164,35 @@ function addFriend(name) {
   });
 } 
 
+// DOM Ready
+document.addEventListener("DOMContentLoaded", () => {
+  const userSelect = document.getElementById("userSelect");
+
+  Object.keys(students).forEach(name => {
+    const option = document.createElement("option");
+    option.value = name;
+    option.textContent = name;
+    userSelect.appendChild(option);
+  });
+
+  userSelect.addEventListener("change", (e) => {
+    if (e.target.value && !selectedUser) {
+      selectedUser = students[e.target.value];
+      renderFriendCards(selectedUser.name);
+      userSelect.disabled = true;
+    }
+  });
+
+  document.getElementById("finishButton").addEventListener("click", () => {
+    if (selectedUser && selectedUser.friends.length > 0) {
+      drawGraph();
+    } else {
+      alert("Por favor selecciona tu nombre y agrega al menos un amigo.");
+    }
+  });
+});
+
+
 /*PARA QUE SE MUESTREN ARISTAS*/ 
 /* function drawGraph() {
   const canvas = document.getElementById("graphCanvas");
@@ -236,31 +261,3 @@ function addFriend(name) {
   }
 } */
 
-// DOM Ready
-document.addEventListener("DOMContentLoaded", () => {
-  const userSelect = document.getElementById("userSelect");
-
-  Object.keys(students).forEach(name => {
-    const option = document.createElement("option");
-    option.value = name;
-    option.textContent = name;
-    userSelect.appendChild(option);
-  });
-
-  userSelect.addEventListener("change", (e) => {
-    if (e.target.value && !selectedUser) {
-      selectedUser = students[e.target.value];
-      renderFriendCards(selectedUser.name);
-      userSelect.disabled = true;
-    }
-  });
-
-  document.getElementById("finishButton").addEventListener("click", () => {
-    if (selectedUser && selectedUser.friends.length > 0) {
-      drawGraph();
-    } else {
-      alert("Por favor selecciona tu nombre y agrega al menos un amigo.");
-    }
-  });
-});
-// HASTA AQUI!!!!!!!!

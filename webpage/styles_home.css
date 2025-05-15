@@ -38,7 +38,7 @@ header {
   height: 40px;
   width: auto;
 }
-/*COPIAR AQUI EL SEARCH-CONTAINER*/
+
 /*Seccion para buscar amigo y busqueda reciente*/
 .search-container {
   display: flex;
@@ -60,7 +60,6 @@ header {
   justify-content: center;
   margin-top: 30px;
 }
-/*DEJAR DE COPIAR HASTA AQUI*/
 
 /* Main content */
 .img-container {

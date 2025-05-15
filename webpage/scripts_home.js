@@ -21,11 +21,6 @@ function openModal() {
     }  
   }  
 
-
-
-
-
-// COPIAR DESDE ACA!!!!!!!!!!!!!!!!!
 // Funcion para hacer que el boton de buscar amigo y busqueda recientes funcionen
   const searchStack = [];
 // Buscar amigo 
