@@ -85,6 +85,8 @@ function renderFriendCards(name) {
   container.innerHTML = "";
   selectedUser = students[name];
 
+  const userHobbies = selectedUser.hobbies.toLowerCase().split(/,\s*/); // Convierte hobbies en array
+
   Object.values(students).forEach((student) => {
     if (student.name !== name && !selectedUser.friends.includes(student) && !addedFriends.has(student.name)) {
       const card = document.createElement("div");
@@ -94,7 +96,23 @@ function renderFriendCards(name) {
       picture.className = "profile-picture";
       picture.style.backgroundImage = `url('${student.image}')`;
 
+      // Calcular compatibilidad
+      const friendHobbies = student.hobbies.toLowerCase().split(/,\s*/);
+      const matches = friendHobbies.filter(hobby => userHobbies.includes(hobby));
+      
+      let compatibility = "low"; // Por defecto
+      compatibility = matches.length > 0 ? "high" : "low";
+
+      
+
+      // Crear el círculo de compatibilidad
+      const circle = document.createElement("div");
+      circle.className = `compatibility-circle ${compatibility}`;
+      // Estilo visual lo haces con CSS
+
       card.appendChild(picture);
+      card.appendChild(circle); // Agrega el círculo al card
+
       card.innerHTML += `
         <h2>${student.name}</h2>
         <p><strong>Edad:</strong> ${student.age}</p>
@@ -108,6 +126,7 @@ function renderFriendCards(name) {
     }
   });
 }
+
 
 function addFriend(name) {
   const friend = students[name];
@@ -191,6 +210,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+
+
 
 
 /*PARA QUE SE MUESTREN ARISTAS*/ 
