@@ -14,3 +14,19 @@ logoLink.addEventListener("click", (event) => {
         window.location.href = logoLink.href; // Redirect
     }, 500); // Match the animation (0.5s)
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const stateStr = localStorage.getItem("friendAppState");
+    if (stateStr) {
+      const state = JSON.parse(stateStr);
+      const container = document.getElementById("searchResults");
+  
+      const friendsList = state.addedFriends.map(name => <li>${name}</li>).join("");
+  
+      container.innerHTML = `
+        <p><strong>Usuario:</strong> ${state.selectedUserName}</p>
+        <p><strong>Amigos guardados:</strong></p>
+        <ul>${friendsList}</ul>
+      `;
+    }
+  });

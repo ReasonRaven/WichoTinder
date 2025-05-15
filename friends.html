@@ -20,12 +20,21 @@
   <main>
     <!-- Selector de usuario -->
     <div class="button-container">
-      <label for="userSelect" style="font-weight:bold; font-size:20px;">Selecciona tu nombre:</label>
+      <label for="userSelect" style="font-weight:bold; font-size:20px;">Selecciona tu usuario:</label>
       <select id="userSelect">
-        <option value="">-- Elegir usuario --</option>
+        <option value="">-- Elejir usuario --</option>
         <!-- Nombres agregados dinámicamente -->
-      </select>
+      </select>  
     </div>
+    <!-- Botón para reiniciar -->
+<div class="button-container">
+  <button id="resetButton" style="margin-top: 10px;">Cambio de usuario</button>
+</div>
+<!-- Botones para mostrar listas -->
+<div class="button-container" style="margin-top: 10px;">
+  <button id="showAddFriends">Agregar Amigos</button>
+  <button id="showRemoveFriends">Eliminar Amigos</button>
+</div>
 
     <!-- Contenedor de personas sugeridas -->
     <div class="cards-container" id="suggestionsContainer"></div>

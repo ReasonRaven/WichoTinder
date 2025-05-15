@@ -54,3 +54,19 @@ function showRecentSearches() {
       "</ul>";
   }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const stateStr = localStorage.getItem("friendAppState");
+  if (stateStr) {
+    const state = JSON.parse(stateStr);
+    const container = document.getElementById("searchResults");
+
+    const friendsList = state.addedFriends.map(name => <li>${name}</li>).join("");
+
+    container.innerHTML = `
+      <p><strong>Usuario:</strong> ${state.selectedUserName}</p>
+      <p><strong>Amigos guardados:</strong></p>
+      <ul>${friendsList}</ul>
+    `;
+  }
+});

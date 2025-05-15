@@ -259,5 +259,17 @@ canvas {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
   }
   
+  .remove-button {
+    background-color: #c0392b;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .remove-button:hover {
+    background-color: #e74c3c;
+  }
   
   
