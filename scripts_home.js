@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const state = JSON.parse(stateStr);
     const container = document.getElementById("searchResults");
 
-    const friendsList = state.addedFriends.map(name => <li>${name}</li>).join("");
+    const friendsList = state.addedFriends.map(name => `<li>${name}</li>`).join("");
 
     container.innerHTML = `
       <p><strong>Usuario:</strong> ${state.selectedUserName}</p>
