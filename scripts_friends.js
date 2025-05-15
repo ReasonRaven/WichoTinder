@@ -26,7 +26,7 @@ function setupStudents() {
     "Leer",
     "Idit: Salón de Rafa",
     "18",
-    "fotos/camila.jpg"
+    "images/Aimep3.jpeg"
   );
   students["Ximena"] = new Student(
     "Ximena",
@@ -50,7 +50,7 @@ function setupStudents() {
     "Jugar",
     "Idit: Salón de Rafa",
     "18",
-    "fotos/tomas.jpg"
+    "images/NegroWhatsapp.jpeg"
   );
   students["Emmanuel"] = new Student(
     "Emmanuel",
@@ -130,7 +130,7 @@ function setupStudents() {
     "Jugar",
     "Edificio B",
     "18",
-    "fotos/jonathan.jpg"
+    "images/Gigachat.jpeg"
   );
   students["Wicho"] = new Student(
     "Wicho",
@@ -166,17 +166,16 @@ function renderFriendCards(name, mode = "add") {
       card.className = "profile-card";
 
       // Verificar compatibilidad
-const studentHobbies = student.hobbies.toLowerCase().split(/,\s*/);
-const compatible = studentHobbies.some((hobby) =>
-  userHobbies.includes(hobby)
-);
+      const studentHobbies = student.hobbies.toLowerCase().split(/,\s*/);
+      const compatible = studentHobbies.some((hobby) =>
+        userHobbies.includes(hobby)
+      );
 
-// Crear el círculo de compatibilidad
-const indicator = document.createElement("div");
-indicator.classList.add("compatibility-circle");
-indicator.classList.add(compatible ? "high" : "low");
-card.appendChild(indicator);
-
+      // Crear el círculo de compatibilidad
+      const indicator = document.createElement("div");
+      indicator.classList.add("compatibility-circle");
+      indicator.classList.add(compatible ? "high" : "low");
+      card.appendChild(indicator);
 
       const picture = document.createElement("div");
       picture.className = "profile-picture";
@@ -208,8 +207,6 @@ card.appendChild(indicator);
     }
   });
 }
-
-
 
 function addFriend(name) {
   const friend = students[name];
