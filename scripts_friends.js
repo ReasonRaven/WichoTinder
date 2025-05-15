@@ -34,15 +34,15 @@ function setupStudents() {
     "Dibujar",
     "Idit: Serendipia y Mesas de trabajo",
     "20",
-    "fotos/ximena.jpg"
+    "images/Gato.jpeg"
   );
-  students["Daniel"] = new Student(
-    "Daniel",
+  students["Peña"] = new Student(
+    "Peña",
     "Ingeniería en Sistemas",
     "Programar",
     "Idit: Salón de Rafa",
     "21",
-    "fotos/pena.jpg"
+    "images/MilesMorales.jpeg"
   );
   students["Tomás"] = new Student(
     "Tomás",
@@ -58,7 +58,7 @@ function setupStudents() {
     "Programar",
     "Canchas",
     "19",
-    "fotos/emma.jpg"
+    "images/Shaq.jpeg"
   );
   students["Suyana"] = new Student(
     "Suyana",
@@ -66,7 +66,7 @@ function setupStudents() {
     "Dibujar",
     "Cafetería",
     "19",
-    "fotos/susu.jpg"
+    "images/Mamacoco.jpeg"
   );
   students["Aitana"] = new Student(
     "Aitana",
@@ -74,7 +74,7 @@ function setupStudents() {
     "Dibujar",
     "Voluntariado",
     "20",
-    "fotos/aitana.jpg"
+    "images/Hamster.jpeg"
   );
   students["Carlos Andrés"] = new Student(
     "Carlos Andrés",
@@ -82,7 +82,7 @@ function setupStudents() {
     "Programar",
     "Edificio A",
     "18",
-    "fotos/carlosA.jpg"
+    "images/William.jpeg"
   );
   students["Carlos"] = new Student(
     "Carlos",
@@ -90,7 +90,7 @@ function setupStudents() {
     "Jugar",
     "Gym",
     "19",
-    "fotos/carlosJ.jpg"
+    "images/Mclovin.jpeg"
   );
   students["Rogelio"] = new Student(
     "Rogelio",
@@ -98,7 +98,7 @@ function setupStudents() {
     "Jugar",
     "Edificio F",
     "19",
-    "fotos/roger.jpg"
+    "images/Negropensando.jpeg"
   );
   students["María Renee"] = new Student(
     "María Renee",
@@ -106,7 +106,7 @@ function setupStudents() {
     "Leer",
     "Idit: Laboratorios",
     "20",
-    "fotos/maria.jpg"
+    "images/RanaRene.jpeg"
   );
   students["Jesús Manuel"] = new Student(
     "Jesús Manuel",
@@ -114,7 +114,7 @@ function setupStudents() {
     "Jugar",
     "Idit: Salón de Oliver",
     "20",
-    "fotos/chuy.jpg"
+    "images/Sherk.jpeg"
   );
   students["Oscar"] = new Student(
     "Oscar",
@@ -122,7 +122,7 @@ function setupStudents() {
     "Jugar",
     "Edificio C",
     "18",
-    "fotos/oscar.jpg"
+    "images/NovioAimep3.jpeg"
   );
   students["Jonathan"] = new Student(
     "Jonathan",
