@@ -39,22 +39,52 @@ header {
   width: auto;
 }
 
-/*Seccion para buscar amigo y busqueda reciente*/
+/* Buscar amigo y búsqueda recientes */
 .search-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 30px;
+  gap: 15px;
 }
 
-.buscar-amigo {
-  margin-left: 10px;
-}
-
+.buscar-amigo,
 .busqueda-recientes {
-  margin-left: 10px;
+  padding: 14px 28px;
+  font-size: 16px;
+  background-color: #ba4b2f;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/*Seccion para mostrar las busquedas recientes*/
+.buscar-amigo:hover,
+.busqueda-recientes:hover {
+  background-color: #953926;
+  transform: scale(1.05);
+}
+
+/* Entrada de texto */
+#friendName {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+  width: 250px;
+  transition: box-shadow 0.3s ease;
+}
+
+#friendName:focus {
+  box-shadow: 0 0 0 3px #ba4b2f66;
+}
+
+/* Búsquedas recientes */
 #searchResults {
   display: flex;
   justify-content: center;
@@ -100,7 +130,6 @@ header {
   background-color: #953926;
   padding: 20px 40px;
   font-size: 20px;
-
 }
 
 /* Modal styles */
@@ -147,4 +176,4 @@ header {
 
 .close:hover {
   color: #ccc;
-}  
+}
