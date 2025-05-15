@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ba4b2f; /* Matches logo background */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling during animation */
+}
+
+.container {
+    text-align: center;
+}
+
+.icon-container {
+    text-align: center;
+}
+
+.icon-container a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.subtitle {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: small;
+}
+
+.icon {
+    width: 500px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease; /* Smooth transition */
+    cursor: pointer;
+}
+
+.icon:hover {
+    transform: scale(1.1); /* Hover effect */
+}
+
+.icon.clicked {
+    transform: scale(1.5); /* Icon expands on click */
+    animation: expandIcon 0.5s forwards ease-in-out; /* Trigger the expand animation */
+}
+
+@keyframes expandIcon {
+    0% {
+        transform: scale(1); /* Start at normal size */
+    }
+    100% {
+        transform: scale(1.5); /* Expand to 150% of original size */
+    }
+}

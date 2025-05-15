@@ -1,0 +1,151 @@
+/* General layout */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #bc644e;
+  color: white;
+}
+
+/* Navbar */
+header {
+  background-color: #ba4b2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 30px;
+  font-size: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+/*COPIAR AQUI EL SEARCH-CONTAINER*/
+/*Seccion para buscar amigo y busqueda reciente*/
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.buscar-amigo {
+  margin-left: 10px;
+}
+
+.busqueda-recientes {
+  margin-left: 10px;
+}
+
+/*Seccion para mostrar las busquedas recientes*/
+#searchResults {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+/*DEJAR DE COPIAR HASTA AQUI*/
+
+/* Main content */
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.campus-img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Button section */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px;
+}
+
+.button-container button,
+.button-container a button {
+  padding: 18px 36px;
+  font-size: 18px;
+  background-color: #ba4b2f;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-container button:hover {
+  background-color: #953926;
+  padding: 20px 40px;
+  font-size: 20px;
+
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: #2d2d2d;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  color: white;
+  position: relative;
+}
+
+.modal-content pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 500px;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ccc;
+}  

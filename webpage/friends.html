@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WichoTinder - Explore</title>
+  <link rel="stylesheet" href="styles_friends.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <img src="wichoTinderLogo.png" alt="WichoTinder Logo" class="logo" />
+      <a href="index.html">HOME</a>
+      <a href="campus.html">CAMPUS</a>
+      <a href="explore.html">EXPLORE</a>
+    </div>
+  </header>
+
+<!--COPIAR DESDE AQUI-->
+  <main>
+    <!-- Selector de usuario -->
+    <div class="button-container">
+      <label for="userSelect" style="font-weight:bold; font-size:20px;">Selecciona tu nombre:</label>
+      <select id="userSelect">
+        <option value="">-- Elegir usuario --</option>
+        <!-- Nombres agregados dinámicamente -->
+      </select>
+    </div>
+
+    <!-- Contenedor de personas sugeridas -->
+    <div class="cards-container" id="suggestionsContainer"></div>
+
+<!-- Lista de amigos seleccionados -->
+<div class="selected-friends" id="selectedFriendsContainer">
+  <h3>Amigos seleccionados:</h3>
+  <ul id="friendList"></ul>
+</div>
+<!--HASTA ACA-->
+
+
+
+    <!-- Botón para terminar -->
+    <div class="button-container">
+      <button id="finishButton" style="margin-top: 30px;">Terminar y crear grafo</button>
+    </div>
+
+    <!-- Contenedor para el grafo generado -->
+    <div id="graphContainer" style="display: flex; justify-content: center; margin-top: 40px;">
+      <canvas id="graphCanvas" width="800" height="600"></canvas>
+    </div>
+  </main>
+
+  <script src="scripts_friends.js"></script>
+</body>
+</html>
